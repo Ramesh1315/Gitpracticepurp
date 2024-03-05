@@ -1,2 +1,6 @@
 This is First text document. I Created to store in repo.
+<<<<<<< HEAD
 changing in local repo.
+=======
+changing in remote.
+>>>>>>> 2064e52235a12f078d9458275c0cb90672edfb7b
