@@ -7,6 +7,4 @@ changing in remote.
 
 <<<<<<< HEAD
 change in local second time 
-=======
-changed in remote repo second time
->>>>>>> 59d52b03dad9aa27e1226f3b52554a9b55a7c149
+
