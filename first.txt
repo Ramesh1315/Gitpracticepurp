@@ -14,3 +14,4 @@ change in local second time
 changed in remote repo second time
 >>>>>>> 59d52b03dad9aa27e1226f3b52554a9b55a7c149
 >>>>>>> 0b1e4d3fe6c21e07fbfb8bdf5f8385c41f5c8d81
+ remote change 3
