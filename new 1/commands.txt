@@ -1,0 +1,248 @@
+$ git init
+Initialized empty Git repository in F:/git-workspace/.git/
+
+$ git status
+fatal: detected dubious ownership in repository at 'F:/git-workspace'
+'F:/git-workspace' is on a file system that does not record ownership
+To add an exception for this directory, call:
+
+        git config --global --add safe.directory F:/git-workspace
+
+$ git config --global --add safe.directory F:/git-workspace~
+
+$ git status
+fatal: detected dubious ownership in repository at 'F:/git-workspace'
+'F:/git-workspace' is on a file system that does not record ownership
+To add an exception for this directory, call:
+
+        git config --global --add safe.directory F:/git-workspace
+
+$ git config --global --add safe.directory F:/git-workspace
+
+91901@LAPTOP-B5UVD7G6 MINGW32 /f/git-workspace (master)
+$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+91901@LAPTOP-B5UVD7G6 MINGW32 /f/git-workspace (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        first.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+91901@LAPTOP-B5UVD7G6 MINGW32 /f/git-workspace (master)
+$ gid add .
+bash: gid: command not found
+
+91901@LAPTOP-B5UVD7G6 MINGW32 /f/git-workspace (master)
+$ git add .
+
+91901@LAPTOP-B5UVD7G6 MINGW32 /f/git-workspace (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   first.txt
+
+
+91901@LAPTOP-B5UVD7G6 MINGW32 /f/git-workspace (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   first.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   first.txt
+
+
+91901@LAPTOP-B5UVD7G6 MINGW32 /f/git-workspace (master)
+$ git restore first.txt
+
+91901@LAPTOP-B5UVD7G6 MINGW32 /f/git-workspace (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   first.txt
+
+
+91901@LAPTOP-B5UVD7G6 MINGW32 /f/git-workspace (master)
+$ git rm --cached first.txt
+rm 'first.txt'
+
+91901@LAPTOP-B5UVD7G6 MINGW32 /f/git-workspace (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        first.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+91901@LAPTOP-B5UVD7G6 MINGW32 /f/git-workspace (master)
+$ git add .
+
+91901@LAPTOP-B5UVD7G6 MINGW32 /f/git-workspace (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   first.txt
+
+
+91901@LAPTOP-B5UVD7G6 MINGW32 /f/git-workspace (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   first.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   first.txt
+
+
+91901@LAPTOP-B5UVD7G6 MINGW32 /f/git-workspace (master)
+$ git add .
+
+91901@LAPTOP-B5UVD7G6 MINGW32 /f/git-workspace (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   first.txt
+
+
+91901@LAPTOP-B5UVD7G6 MINGW32 /f/git-workspace (master)
+$ git commit -m "First commit to First text ile"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got '91901@LAPTOP-B5UVD7G6.(none)')
+
+91901@LAPTOP-B5UVD7G6 MINGW32 /f/git-workspace (master)
+$ git log
+fatal: your current branch 'master' does not have any commits yet
+
+91901@LAPTOP-B5UVD7G6 MINGW32 /f/git-workspace (master)
+$ git config
+usage: git config [<options>]
+
+Config file location
+    --[no-]global         use global config file
+    --[no-]system         use system config file
+    --[no-]local          use repository config file
+    --[no-]worktree       use per-worktree config file
+    -f, --[no-]file <file>
+                          use given config file
+    --[no-]blob <blob-id> read config from given blob object
+
+Action
+    --[no-]get            get value: name [value-pattern]
+    --[no-]get-all        get all values: key [value-pattern]
+    --[no-]get-regexp     get values for regexp: name-regex [value-pattern]
+    --[no-]get-urlmatch   get value specific for the URL: section[.var] URL
+    --[no-]replace-all    replace all matching variables: name value [value-pattern]
+    --[no-]add            add a new variable: name value
+    --[no-]unset          remove a variable: name [value-pattern]
+    --[no-]unset-all      remove all matches: name [value-pattern]
+    --[no-]rename-section rename section: old-name new-name
+    --[no-]remove-section remove a section: name
+    -l, --[no-]list       list all
+    --[no-]fixed-value    use string equality when comparing values to 'value-pattern'
+    -e, --[no-]edit       open an editor
+    --[no-]get-color      find the color configured: slot [default]
+    --[no-]get-colorbool  find the color setting: slot [stdout-is-tty]
+
+Type
+    -t, --[no-]type <type>
+                          value is given this type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --bool-or-str         value is --bool or string
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --[no-]null       terminate values with NUL byte
+    --[no-]name-only      show variable names only
+    --[no-]includes       respect include directives on lookup
+    --[no-]show-origin    show origin of config (file, standard input, blob, command line)
+    --[no-]show-scope     show scope of config (worktree, local, global, system, command)
+    --[no-]default <value>
+                          with --get, use default value when missing entry
+
+
+91901@LAPTOP-B5UVD7G6 MINGW32 /f/git-workspace (master)
+$ ^C
+
+91901@LAPTOP-B5UVD7G6 MINGW32 /f/git-workspace (master)
+$ git config --global user.email "ram1816121@gmail.com"
+
+91901@LAPTOP-B5UVD7G6 MINGW32 /f/git-workspace (master)
+$ git config --global user.name "Ramesh1315"
+
+91901@LAPTOP-B5UVD7G6 MINGW32 /f/git-workspace (master)
+$ git commit -m "First commit to First text ile"
+[master (root-commit) 35934e4] First commit to First text ile
+ 1 file changed, 1 insertion(+)
+ create mode 100644 first.txt
+
+91901@LAPTOP-B5UVD7G6 MINGW32 /f/git-workspace (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+91901@LAPTOP-B5UVD7G6 MINGW32 /f/git-workspace (master)
+$ git log
+commit 35934e4f3682f15f726ceaf073d758cec8dada2f (HEAD -> master)
+Author: Ramesh1315 <ram1816121@gmail.com>
+Date:   Fri Mar 1 07:27:29 2024 +0530
+
+    First commit to First text ile
+
+91901@LAPTOP-B5UVD7G6 MINGW32 /f/git-workspace (master)
